@@ -3,7 +3,7 @@
     <!-- <p>{{ users[0].id }}, {{ users[0].name }}</p> -->
     <ul>
       <li v-for="user in users" :key="user.id">
-        {{ user.id }}, {{ user.name }}
+        [ID] {{ user.id }}, [Name] {{ user.name }}, [Email] {{ user.email }}, [Company Name] {{ user.company.name }}
       </li>
     </ul>
   </div>
