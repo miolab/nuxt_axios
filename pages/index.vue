@@ -1,19 +1,23 @@
 <template>
   <div class="container">
-    <!-- <p>{{ users[0].id }}, {{ users[0].name }}</p> -->
-    <ul>
-      <li v-for="user in users" :key="user.id">
-        [ID] {{ user.id }}, [Name] {{ user.name }}, [Email] {{ user.email }}, [Company Name] {{ user.company.name }}
-      </li>
-    </ul>
+    <h1>Users</h1>
+    <hr>
+    <table>
+      <tr v-for="user in users" :key="user.id">
+        <td>[ID] {{ user.id }}</td>
+        <td>[Name] {{ user.name }}</td>
+        <td>[Email] {{ user.email }}</td>
+        <td>[Company Name] {{ user.company.name }}</td>
+      </tr>
+    </table>
   </div>
 </template>
 
 <script>
 const axios = require('axios').default;
 
-// let url = 'https://jsonplaceholder.typicode.com/users'
-let url = 'https://jsonplaceholder.typicode.com/users_hogehoge'
+const url = 'https://jsonplaceholder.typicode.com/users'
+// const url = 'https://jsonplaceholder.typicode.com/users_for404test'
 
 export default {
   asyncData({ params, error }) {
