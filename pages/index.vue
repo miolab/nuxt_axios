@@ -1,7 +1,11 @@
 <template>
   <div class="container">
-    <p>{{ users[0].id }}, {{ users[0].name }}</p>
-    <p>{{ users[1].id }}, {{ users[1].name }}</p>
+    <!-- <p>{{ users[0].id }}, {{ users[0].name }}</p> -->
+    <ul>
+      <li v-for="user in users" :key="user.id">
+        {{ user.id }}, {{ user.name }}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -18,4 +22,3 @@ export default {
   }
 }
 </script>
-
